@@ -5,58 +5,76 @@
     <meta content="Agustin Videla" name="author">
     <meta content="Calculadora de Vectores" name="description">
     <title>Vectores</title>
+    <link rel="stylesheet" href="principal.css" type="text/css">
 </head>
-<style>
-    body{
-        background: white;
-        color: black;
-        font-family: Arial;
-        margin: 0;
-        padding: 0;
-    }
-</style>
+
 
 <body>
 
     <header>
-        <span>
+        <div id="titulo">
             <h1>VECTORES</h1>
-        </span>
-        <nav><span>TEORIA</span><span>MATRIZ</span></nav>
+        </div>
+        <nav>
+            <span class="pestaña" id="teoria"><h2><a href="#">TEORIA</a></h2></span>
+            <span class="pestaña" id="matriz"><h2><a href="#">MATRIZ</a></h2></span>
+        </nav>
     </header>
 
 
-    <hr/>
-
-
-    <main>
-
-        <div>
-            <section>
+    <div id="main">
+        <div id="toolbar">
+            <section class="menu" id="vectores">
                 <h2>Vectores</h2>
             </section>
 
-            <section>
-                    <h2>Funciones</h2>
-                    <ul>
-                        <li>Suma <input type="number"> + <input type="number"> <button>-></button> </li>
-                        <li>Escalar <input type="number"> * <input type="number"> <button>-></button></li>
-                        <li>Norma <input type="number"> <button>-></button></li>
-                        <li>Distancia <input type="number"> ; <input type="number"> <button>-></button></li>
-                    </ul>
+            <section class="menu" id="funciones">
+                <h2>Funciones</h2>
+                <ul>
+                    <li>
+                        <div>
+                            <label for="suma">Suma: </label>
+                            <input id="suma" class="numero" type="number"> + <input class="numero" type="number">
+                            <button>-></button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="norma">Norma: </label>
+                            <input id="norma" class="numero" type="number">
+                            <button>-></button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="escalar">Escalar: </label>
+                            <input id="escalar" class="numero" type="number"> * <input class="numero" type="number">
+                            <button>-></button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label for="distancia">Distancia: </label>
+                            <input id="distancia" class="numero" type="number"><strong>;</strong><input class="numero" type="number">
+                            <button>-></button>
+                        </div>
+                    </li>
+                </ul>
             </section>
         </div>
+        <div id="canvas">
+            <div id="grafico">
+                <!-- <img id="meme" src="Imagenes/meme.PNG" alt="Meme"> -->
+            </div>
+        </div>
+    </div>
 
-        <canvas>
-            <!-- Y aquí es donde pondría mi matriz, si tuviera una -->
-        </canvas>
 
-    </main>
-
-    <hr/>
 
     <footer>
-        <h6>Agustin Videla</h6>
+        <span id="firma">
+            Agustin Videla
+        </span>
     </footer>
 
 </body>

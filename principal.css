@@ -1,0 +1,92 @@
+body{
+    height: 100%;
+    background: gainsboro;
+    opacity: 90;
+    color: black;
+    font-family: Arial;
+    margin: 0px;
+    padding: 0;
+}
+header{
+    background: lawngreen;
+    position: relative;
+}
+#titulo{
+    border: 1px solid black;
+    width: 20%;
+    font-size: 100%;
+    text-align: center;
+}
+nav{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 50%;
+}
+.pestaña{
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 10px;
+}
+#matriz{
+    position: absolute;
+    right: 0px;
+    margin: 0px 3px;
+    width: 100px;
+}
+#teoria{
+    position: absolute;
+    right: 103px;
+    margin: 0px 3px;
+    width: 100px;
+}
+#main{
+    width: 100%;
+
+    border: 1px solid lightsalmon;
+    position: relative;
+    bottom: 0px;
+}
+#toolbar{
+    background: violet;
+position: relative;
+    height: 100%;
+    width: 20%;
+border: 1px solid blue;
+}
+.menu{
+font-size: 10px;
+}
+.numero{
+width: 50px;
+}
+#canvas{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    border: 1px solid green;
+}
+/*#meme{
+    height: 300px;
+    width: 300px;
+    align-content: center;
+}*/
+footer{
+    background: aqua;
+    position: fixed;
+    bottom: 0px;
+    margin: 0px;
+    height: 5%;
+    width: 100%;
+}
+#firma{
+    position: absolute;
+    right: 5px;
+    top: 25%;
+    text-align: right;
+}

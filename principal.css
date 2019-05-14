@@ -1,6 +1,6 @@
 body{
     margin: 0 15%;
-    background-image: url("Imagenes/maths.jpg");
+    background-image: url("imagenes/maths.jpg");
     height: 100vh;
     width: 70vw;
     opacity: 90;
@@ -9,7 +9,7 @@ body{
 }
 header{
     height: 10vh;
-    background: url("Imagenes/boxes.png");
+    background: url("imagenes/boxes.png");
     position: relative;
 }
 #titulo{
@@ -58,7 +58,6 @@ nav{
     height: inherit;
     padding: 5px 0 0 5px;
     background: linear-gradient(to right, darkgrey, grey, dimgrey);
-    /*background: url("Imagenes/gradient.png");*/
     position: relative;
     width: 30%;
 }
@@ -67,7 +66,6 @@ nav{
 }
 ul{
     list-style-type: none;
-   /* border: 1px solid black; */
     padding: 5px;
     font-size: 17px;
 }
@@ -108,7 +106,7 @@ width: 50px;
     margin-left: 20%;
 }
 footer{
-    background: url("Imagenes/boxes.png");
+    background: url("imagenes/boxes.png");
     position: fixed;
     bottom: 0px;
     margin: 0px;

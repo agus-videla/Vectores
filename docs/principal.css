@@ -63,7 +63,8 @@ nav{
     width: 30%;
 }
 .bases{
-    padding: 0 15px;
+    margin: 0 5px;
+    padding: 0 5px;
 }
 ul{
     list-style-type: none;
@@ -74,8 +75,14 @@ ul{
 li{
     margin: 15px 0;
 }
+strong{
+    margin: 0 5px;
+    font-size: 17px;
+}
+strong.bases{
+}
 input.base{
-    width: 7vw;
+    width: 6vw;
 }
 input.vector{
     width: 5vw;

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="principal.css" type="text/css">
 </head>
 
-
 <body>
 
     <header>
@@ -24,38 +23,45 @@
 
     <div id="main">
         <div id="toolbar">
+            <section class="menu">
+                <h2>Bases:</h2>
+                <div class="bases">
+                    <span class="bases"><input class="base" type="number"></span><span class="bases"><input class="base" type="number"></span>
+                </div>
+            </section>
+
             <section class="menu" id="vectores">
-                <h2>Vectores</h2>
+                <h2>Vectores:</h2>
             </section>
 
             <section class="menu" id="funciones">
-                <h2>Funciones</h2>
+                <h2>Funciones:</h2>
                 <ul>
                     <li>
                         <div>
                             <label for="suma">Suma: </label>
-                            <input id="suma" class="numero" type="number"> + <input class="numero" type="number">
+                            <input id="suma" class="vector" type="number"><strong>+</strong><input class="vector" type="number">
                             <button>-></button>
                         </div>
                     </li>
                     <li>
                         <div>
                             <label for="norma">Norma: </label>
-                            <input id="norma" class="numero" type="number">
+                            <input id="norma" class="vector" type="number">
                             <button>-></button>
                         </div>
                     </li>
                     <li>
                         <div>
                             <label for="escalar">Escalar: </label>
-                            <input id="escalar" class="numero" type="number"> * <input class="numero" type="number">
+                            <input id="escalar" class="numero" type="number"><strong>*</strong><input class="vector" type="number">
                             <button>-></button>
                         </div>
                     </li>
                     <li>
                         <div>
                             <label for="distancia">Distancia: </label>
-                            <input id="distancia" class="numero" type="number"><strong>;</strong><input class="numero" type="number">
+                            <input id="distancia" class="vector" type="number"><strong>;</strong><input class="vector" type="number">
                             <button>-></button>
                         </div>
                     </li>
@@ -63,19 +69,16 @@
             </section>
         </div>
         <div id="canvas">
-            <div id="grafico">
-                <!-- <img id="meme" src="Imagenes/meme.PNG" alt="Meme"> -->
-            </div>
+            <img id="meme" src="Imagenes/meme.PNG" alt="Meme">
+            <canvas>
+            </canvas>
         </div>
     </div>
-
-
 
     <footer>
         <span id="firma">
             Agustin Videla
         </span>
     </footer>
-
 </body>
 </html>

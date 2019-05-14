@@ -1,20 +1,22 @@
 body{
-    height: 100%;
-    background: gainsboro;
+    margin: 0 15%;
+    background-image: url("Imagenes/maths.jpg");
+    height: 100vh;
+    width: 70vw;
     opacity: 90;
     color: black;
-    font-family: Arial;
-    margin: 0px;
-    padding: 0;
+    font-family: Arial, serif;
 }
 header{
-    background: lawngreen;
+    height: 10vh;
+    background: url("Imagenes/boxes.png");
     position: relative;
 }
 #titulo{
-    border: 1px solid black;
-    width: 20%;
-    font-size: 100%;
+    bottom: -3vh;
+    position: absolute;
+    width: 30%;
+    font-size: 3vh;
     text-align: center;
 }
 nav{
@@ -24,6 +26,7 @@ nav{
     width: 50%;
 }
 .pestaña{
+    background: white;
     border: 1px solid black;
     position: absolute;
     bottom: 0px;
@@ -44,45 +47,73 @@ nav{
     width: 100px;
 }
 #main{
-    width: 100%;
-
-    border: 1px solid lightsalmon;
+    margin: 0;
+    height: 85vh;
+    width: 70vw;
     position: relative;
-    bottom: 0px;
 }
 #toolbar{
-    background: violet;
-position: relative;
-    height: 100%;
-    width: 20%;
-border: 1px solid blue;
+    margin: 0;
+    border: 1px solid black;
+    height: inherit;
+    padding: 5px 0 0 5px;
+    background: linear-gradient(to right, darkgrey, grey, dimgrey);
+    /*background: url("Imagenes/gradient.png");*/
+    position: relative;
+    width: 30%;
+}
+.bases{
+    padding: 0 15px;
+}
+ul{
+    list-style-type: none;
+   /* border: 1px solid black; */
+    padding: 5px;
+    font-size: 17px;
+}
+li{
+    margin: 15px 0;
+}
+input.base{
+    width: 7vw;
+}
+input.vector{
+    width: 5vw;
+}
+input.numero{
+    witdth: 3vw;
+}
+#funciones{
+    position: absolute;
+    bottom: 3vh;
 }
 .menu{
-font-size: 10px;
+font-size: 18px;
 }
 .numero{
 width: 50px;
 }
 #canvas{
+    margin: 0;
+    border: 1px solid black;
     position: absolute;
-    width: 80%;
-    height: 100%;
+    width: 70%;
+    height: inherit;
     top: 0px;
     right: 0px;
-    border: 1px solid green;
+    background: white;
 }
-/*#meme{
-    height: 300px;
-    width: 300px;
-    align-content: center;
-}*/
+#meme{
+    height: 100%;
+    margin-left: 20%;
+}
 footer{
-    background: aqua;
+    background: url("Imagenes/boxes.png");
     position: fixed;
     bottom: 0px;
     margin: 0px;
-    height: 5%;
-    width: 100%;
+    height: 5vh;
+    width: 70vw;
 }
 #firma{
     position: absolute;

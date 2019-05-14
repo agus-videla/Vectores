@@ -10,75 +10,84 @@
 
 <body>
 
-    <header>
-        <div id="titulo">
-            <h1>VECTORES</h1>
-        </div>
-        <nav>
-            <span class="pestaña" id="teoria"><h2><a href="#">TEORIA</a></h2></span>
-            <span class="pestaña" id="matriz"><h2><a href="#">MATRIZ</a></h2></span>
-        </nav>
-    </header>
-
-
-    <div id="main">
-        <div id="toolbar">
-            <section class="menu">
-                <h2>Bases:</h2>
-                <div class="bases">
-                    <span class="bases"><input class="base" type="number"></span><span class="bases"><input class="base" type="number"></span>
-                </div>
-            </section>
-
-            <section class="menu" id="vectores">
-                <h2>Vectores:</h2>
-            </section>
-
-            <section class="menu" id="funciones">
-                <h2>Funciones:</h2>
-                <ul>
-                    <li>
-                        <div>
-                            <label for="suma">Suma: </label>
-                            <input id="suma" class="vector" type="number"><strong>+</strong><input class="vector" type="number">
-                            <button>-></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <label for="norma">Norma: </label>
-                            <input id="norma" class="vector" type="number">
-                            <button>-></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <label for="escalar">Escalar: </label>
-                            <input id="escalar" class="numero" type="number"><strong>*</strong><input class="vector" type="number">
-                            <button>-></button>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <label for="distancia">Distancia: </label>
-                            <input id="distancia" class="vector" type="number"><strong>;</strong><input class="vector" type="number">
-                            <button>-></button>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </div>
-        <div id="canvas">
-            <img id="meme" src="Imagenes/meme.PNG" alt="Meme">
-            <canvas>
-            </canvas>
-        </div>
+<header>
+    <div id="titulo">
+        <h1>VECTORES</h1>
     </div>
+    <nav>
+        <span class="pestaña" id="teoria"><h2><a href="#">TEORIA</a></h2></span>
+        <span class="pestaña" id="matriz"><h2><a href="#">MATRIZ</a></h2></span>
+    </nav>
+</header>
 
-    <footer>
+
+<div id="main">
+    <div id="toolbar">
+        <section class="menu">
+            <h2>Bases:</h2>
+            <div class="bases">
+                <label for="b1">B1:</label>
+                <span class="bases"><input class="base" id="b1" type="number"></span>
+                <label for="b2">B2:</label>
+                <span class="bases"><input class="base" id="b2" type="number"></span>
+            </div>
+        </section>
+
+        <section class="menu" id="vectores">
+            <h2>Vectores:</h2>
+            <ol>
+                <li><input type="number"></li>
+                <li><input type="number"></li>
+                <li><input type="number"></li>
+                <li><input type="number"></li>
+            </ol>
+        </section>
+
+        <section class="menu" id="funciones">
+            <h2>Funciones:</h2>
+            <ul>
+                <li>
+                    <div>
+                        <label for="suma">Suma: </label>
+                        <input id="suma" class="vector" type="number"><strong>+</strong><input class="vector" type="number">
+                        <button>-&gt;</button>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="norma">Norma: </label>
+                        <input id="norma" class="vector" type="number">
+                        <button>-&gt;</button>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="escalar">Escalar: </label>
+                        <input id="escalar" class="numero" type="number"><strong>*</strong><input class="vector" type="number">
+                        <button>-&gt;</button>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="distancia">Distancia: </label>
+                        <input id="distancia" class="vector" type="number"><strong>;</strong><input class="vector" type="number">
+                        <button>-&gt;</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div id="canvas">
+        <img id="meme" src="Imagenes/meme.PNG" alt="Meme">
+        <canvas>
+        </canvas>
+    </div>
+</div>
+
+<footer>
         <span id="firma">
             Agustin Videla
         </span>
-    </footer>
+</footer>
+
 </body>
-</html>

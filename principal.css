@@ -62,12 +62,15 @@ nav{
     width: 30%;
 }
 .bases{
-    padding: 0 15px;
+    padding: 0 1px;
 }
 ul{
     list-style-type: none;
     padding: 5px;
     font-size: 17px;
+}
+strong{
+    margin: 5px;
 }
 li{
     margin: 15px 0;

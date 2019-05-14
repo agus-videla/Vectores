@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef477689-263b-4f62-b9e0-c38db98f2034" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/principal.css" beforeDir="false" afterPath="$PROJECT_DIR$/principal.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,8 +31,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/principal.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="155">
-                  <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
+                <state relative-caret-position="371">
+                  <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -53,7 +53,17 @@
           </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-336">
+                  <caret line="7" column="64" lean-forward="true" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+                  <folding>
+                    <element signature="e#1659#1663#0" expanded="true" />
+                    <element signature="e#1933#1937#0" expanded="true" />
+                    <element signature="e#2267#2271#0" expanded="true" />
+                    <element signature="e#2607#2611#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
             </entry>
           </file>
         </leaf>
@@ -75,6 +85,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/principal.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/principal.css" />
       </list>
     </option>
@@ -152,11 +163,12 @@
       <workItem from="1557872099298" duration="125000" />
       <workItem from="1557872243917" duration="21000" />
       <workItem from="1557872351426" duration="4000" />
+      <workItem from="1557872651410" duration="324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30144000" />
+    <option name="totallyTimeSpent" value="30468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -204,13 +216,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/principal.html" />
-    <entry file="file://$PROJECT_DIR$/principal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -220,7 +225,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="7" column="64" lean-forward="true" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+          <folding>
+            <element signature="e#1659#1663#0" expanded="true" />
+            <element signature="e#1933#1937#0" expanded="true" />
+            <element signature="e#2267#2271#0" expanded="true" />
+            <element signature="e#2607#2611#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/principal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

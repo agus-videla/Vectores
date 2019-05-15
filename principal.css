@@ -104,10 +104,6 @@ width: 50px;
     right: 0px;
     background: white;
 }
-#meme{
-    height: 100%;
-    margin-left: 20%;
-}
 footer{
     background: url("imagenes/boxes.png");
     position: fixed;

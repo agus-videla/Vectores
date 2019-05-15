@@ -44,8 +44,8 @@
         </section>
 
         <section class="menu" id="funciones">
-            <h2>Funciones:</h2>
-            <ul>
+            <h2 id="tf">Funciones:</h2>
+            <!--<ul>
                 <li>
                     <div>
                         <label for="suma">Suma: </label>
@@ -74,7 +74,35 @@
                         <button>-&gt;</button>
                     </div>
                 </li>
-            </ul>
+            </ul>-->
+            <div id="labels">
+                <ul>
+                    <li>Suma:</li>
+                    <li>Norma:</li>
+                    <li>Escalar:</li>
+                    <li>Distancia:</li>
+                </ul>
+            </div>
+            <div id="inputs">
+                <ul>
+                    <li>
+                        <input id="suma" class="vector" type="number"><strong>+</strong><input class="vector" type="number">
+                        <button>-&gt;</button>
+                    </li>
+                    <li>
+                        <input id="norma" class="vector" type="number">
+                        <button>-&gt;</button>
+                    </li>
+                    <li>
+                        <input id="escalar" class="numero" type="number"><strong>*</strong><input class="vector" type="number">
+                        <button>-&gt;</button>
+                    </li>
+                    <li>
+                        <input id="distancia" class="vector" type="number"><strong>;</strong><input class="vector" type="number">
+                        <button>-&gt;</button>
+                    </li>
+                </ul>
+            </div>
         </section>
     </div>
     <div id="canvas">

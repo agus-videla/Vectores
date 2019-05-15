@@ -56,7 +56,7 @@ nav{
     margin: 0;
     border: 1px solid black;
     height: inherit;
-    padding: 5px 0 0 5px;
+    padding: 5px 0 0 1vh;
     background: linear-gradient(to right, darkgrey, grey, dimgrey);
     position: relative;
     width: 30%;
@@ -82,11 +82,36 @@ input.vector{
     width: 5vw;
 }
 input.numero{
-    witdth: 3vw;
+    width: 3vw;
 }
 #funciones{
     position: absolute;
+    width: 100%;
+    height: 40vh;
     bottom: 3vh;
+    margin: 0;
+}
+#tf{
+    position: absolute;
+    top: 3vh;
+    left: 0;
+
+}
+#labels{
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    bottom: 1vh;
+    left: 0;
+    margin: inherit;
+}
+#inputs{
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    bottom: 1.7vh;
+    right: 1vw;
+    margin: inherit;
 }
 .menu{
 font-size: 18px;

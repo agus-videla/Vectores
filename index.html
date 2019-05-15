@@ -23,7 +23,7 @@
 
 <div id="main">
     <div id="toolbar">
-        <section class="menu">
+        <section class="menu" id="bases">
             <h2>Bases:</h2>
             <div class="bases">
                 <label for="b1">B1:</label>
@@ -35,46 +35,34 @@
 
         <section class="menu" id="vectores">
             <h2>Vectores:</h2>
-            <ol>
-                <li><input type="number"></li>
-                <li><input type="number"></li>
-                <li><input type="number"></li>
-                <li><input type="number"></li>
-            </ol>
+            <div id="inputVectores">
+                <ol>
+                    <li><input type="number"></li>
+                    <li><input type="number"></li>
+                    <li><input type="number"></li>
+                    <li><input type="number"></li>
+                </ol>
+            </div>
+            <div id="putBase">
+                <ul>
+                    <li>
+                        <button class="putBase"><strong>B</strong></button>
+                    </li>
+                    <li>
+                        <button class="putBase"><strong>B</strong></button>
+                    </li>
+                    <li>
+                        <button class="putBase"><strong>B</strong></button>
+                    </li>
+                    <li>
+                        <button class="putBase"><strong>B</strong></button>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section class="menu" id="funciones">
             <h2 id="tf">Funciones:</h2>
-            <!--<ul>
-                <li>
-                    <div>
-                        <label for="suma">Suma: </label>
-                        <input id="suma" class="vector" type="number"><strong>+</strong><input class="vector" type="number">
-                        <button>-&gt;</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label for="norma">Norma: </label>
-                        <input id="norma" class="vector" type="number">
-                        <button>-&gt;</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label for="escalar">Escalar: </label>
-                        <input id="escalar" class="numero" type="number"><strong>*</strong><input class="vector" type="number">
-                        <button>-&gt;</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label for="distancia">Distancia: </label>
-                        <input id="distancia" class="vector" type="number"><strong>;</strong><input class="vector" type="number">
-                        <button>-&gt;</button>
-                    </div>
-                </li>
-            </ul>-->
             <div id="labels">
                 <ul>
                     <li>Suma:</li>
@@ -86,19 +74,19 @@
             <div id="inputs">
                 <ul>
                     <li>
-                        <input id="suma" class="vector" type="number"><strong>+</strong><input class="vector" type="number">
+                        <input class="vector" id="suma" type="number"><strong>+</strong><input class="vector" type="number">
                         <button>-&gt;</button>
                     </li>
                     <li>
-                        <input id="norma" class="vector" type="number">
+                        <input class="vector" id="norma" type="number">
                         <button>-&gt;</button>
                     </li>
                     <li>
-                        <input id="escalar" class="numero" type="number"><strong>*</strong><input class="vector" type="number">
+                        <input class="numero" id="escalar" type="number"><strong>*</strong><input class="vector" type="number">
                         <button>-&gt;</button>
                     </li>
                     <li>
-                        <input id="distancia" class="vector" type="number"><strong>;</strong><input class="vector" type="number">
+                        <input class="vector" id="distancia" type="number"><strong>;</strong><input class="vector" type="number">
                         <button>-&gt;</button>
                     </li>
                 </ul>

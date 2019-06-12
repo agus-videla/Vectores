@@ -61,6 +61,15 @@ nav{
     position: relative;
     width: 30%;
 }
+#indice{
+    margin: 0;
+    border: 1px solid black;
+    height: inherit;
+    padding: 5px 0 0 1vh;
+    background: linear-gradient(to right, darkgrey, grey, dimgrey);
+    position: relative;
+    width: 30%;
+}
 #vectores{
     position: relative;
 }
@@ -132,6 +141,16 @@ font-size: 18px;
 width: 50px;
 }
 #canvas{
+    margin: 0;
+    border: 1px solid black;
+    position: absolute;
+    width: 70%;
+    height: inherit;
+    top: 0;
+    right: 0;
+    background: white;
+}
+#texto{
     margin: 0;
     border: 1px solid black;
     position: absolute;

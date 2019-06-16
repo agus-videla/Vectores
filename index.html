@@ -28,7 +28,7 @@
             <h2>Bases:</h2>
             <div class="bases">
                 <label for="b1">B1:</label>
-                <span class="bases"><input class="base" id="b1" type="number"></span>
+                <span class="bases"><input class="base" id="b1" name="b1" type="number"></span>
                 <label for="b2">B2:</label>
                 <span class="bases"><input class="base" id="b2" type="number"></span>
             </div>
@@ -38,25 +38,25 @@
             <h2>Vectores:</h2>
             <div id="inputVectores">
                 <ol>
-                    <li><input type="number"></li>
-                    <li><input type="number"></li>
-                    <li><input type="number"></li>
-                    <li><input type="number"></li>
+                    <li><input type="number" id="v1"></li>
+                    <li><input type="number" id="v2"></li>
+                    <li><input type="number" id="v3"></li>
+                    <li><input type="number" id="v4"></li>
                 </ol>
             </div>
             <div id="putBase">
                 <ul>
                     <li>
-                        <button class="putBase"><strong>B</strong></button>
+                        <button class="putBase" onclick="base(document.getElementById('v1').input)"><strong>B</strong></button>
                     </li>
                     <li>
-                        <button class="putBase"><strong>B</strong></button>
+                        <button class="putBase" onclick="base(document.getElementById('v2').input)"><strong>B</strong></button>
                     </li>
                     <li>
-                        <button class="putBase"><strong>B</strong></button>
+                        <button class="putBase" onclick="base(document.getElementById('v3').input)"><strong>B</strong></button>
                     </li>
                     <li>
-                        <button class="putBase"><strong>B</strong></button>
+                        <button class="putBase" onclick="base(document.getElementById('v4').input)"><strong>B</strong></button>
                     </li>
                 </ul>
             </div>
@@ -75,8 +75,8 @@
             <div id="inputs">
                 <ul>
                     <li>
-                        <input class="vector" id="suma" type="number"><strong>+</strong><input class="vector" type="number">
-                        <button>-&gt;</button>
+                        <input class="vector" id="suma" name="suma1" type="number"><strong>+</strong><input class="vector" name="suma2" type="number">
+                        <button onclick="sumar()">-&gt;</button>
                     </li>
                     <li>
                         <input class="vector" id="norma" type="number">

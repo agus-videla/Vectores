@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
 body{
     margin: 0 15%;
     background-image: url("imagenes/maths.jpg");
@@ -5,7 +7,7 @@ body{
     width: 70vw;
     opacity: 90;
     color: black;
-    font-family: Arial, serif;
+    font-family: "Roboto", serif;
 }
 header{
     height: 10vh;
@@ -61,14 +63,30 @@ nav{
     position: relative;
     width: 30%;
 }
-#indice{
+.indice{
     margin: 0;
     border: 1px solid black;
     height: inherit;
-    padding: 5px 0 0 1vh;
+    padding: 5px 0 0 0;
     background: linear-gradient(to right, darkgrey, grey, dimgrey);
     position: relative;
     width: 30%;
+}
+.linkContenido{
+    display: block;
+    cursor: pointer;
+    background-color: inherit;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    outline: none;
+    transition: 0.3s;
+}
+.linkContenido:hover{
+    background-color: rgba(96, 96, 96, 0.39);
+}
+.linkContenido.activo{
+    background-color: red;
 }
 #vectores{
     position: relative;
@@ -89,6 +107,11 @@ ul{
     list-style-type: none;
     padding: 5px;
     font-size: 17px;
+}
+.sub{
+    list-style-type: disc;
+    margin-left: 2vw;
+    font-size: x-large;
 }
 strong{
     margin: 5px;
@@ -150,7 +173,7 @@ width: 50px;
     right: 0;
     background: white;
 }
-#texto{
+.contenido{
     margin: 0;
     border: 1px solid black;
     position: absolute;
@@ -159,6 +182,9 @@ width: 50px;
     top: 0;
     right: 0;
     background: white;
+}
+.contenido.ul{
+    list-style-type: disc;
 }
 footer{
     background: url("imagenes/boxes.png");
@@ -173,4 +199,11 @@ footer{
     right: 5px;
     top: 25%;
     text-align: right;
+}
+
+/*Elimina botones de rotacion de valores para inputs de numeros*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

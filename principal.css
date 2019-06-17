@@ -86,7 +86,7 @@ nav{
     background-color: rgba(96, 96, 96, 0.39);
 }
 .linkContenido.activo{
-    background-color: red;
+    background-color: grey;
 }
 #vectores{
     position: relative;
@@ -97,7 +97,7 @@ nav{
 }
 #putBase{
     position: absolute;
-    right: 2vw;
+    right: 1vw;
     top: 4vh;
 }
 .bases{
@@ -173,6 +173,11 @@ width: 50px;
     right: 0;
     background: white;
 }
+#canvasVector{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 .contenido{
     margin: 0;
     border: 1px solid black;
@@ -185,6 +190,15 @@ width: 50px;
 }
 .contenido.ul{
     list-style-type: disc;
+}
+#lista{
+    border: solid black;
+    position: absolute;
+}
+#elementos{
+    position: relative;
+    width: 50%;
+    height: 50%;
 }
 footer{
     background: url("imagenes/boxes.png");

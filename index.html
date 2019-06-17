@@ -9,7 +9,7 @@
     <script type="text/javascript" src="funciones.js"></script>
 </head>
 
-<body>
+<body onload="inicio()">
 
 <header>
     <div id="titulo">
@@ -38,25 +38,29 @@
             <h2>Vectores:</h2>
             <div id="inputVectores">
                 <ol>
-                    <li><input type="number" id="v1"></li>
-                    <li><input type="number" id="v2"></li>
-                    <li><input type="number" id="v3"></li>
-                    <li><input type="number" id="v4"></li>
+                    <li><input type="number" id="v1" onchange="obtener('v1')"></li>
+                    <li><input type="number" id="v2" onchange="obtener('v2')"></li>
+                    <li><input type="number" id="v3" onchange="obtener('v3')"></li>
+                    <li><input type="number" id="v4" onchange="obtener('v4')"></li>
                 </ol>
             </div>
             <div id="putBase">
                 <ul>
                     <li>
-                        <button class="putBase" onclick="base(document.getElementById('v1').input)"><strong>B</strong></button>
+                        <button class="putBase" onclick="bases('v1','b1')"><strong>B1</strong></button>
+                        <button class="putBase" onclick="bases('v1','b2')"><strong>B2</strong></button>
                     </li>
                     <li>
-                        <button class="putBase" onclick="base(document.getElementById('v2').input)"><strong>B</strong></button>
+                        <button class="putBase" onclick="bases('v2','b1')"><strong>B1</strong></button>
+                        <button class="putBase" onclick="bases('v2','b2')"><strong>B2</strong></button>
                     </li>
                     <li>
-                        <button class="putBase" onclick="base(document.getElementById('v3').input)"><strong>B</strong></button>
+                        <button class="putBase" onclick="bases('v3','b1')"><strong>B1</strong></button>
+                        <button class="putBase" onclick="bases('v3','b2')"><strong>B2</strong></button>
                     </li>
                     <li>
-                        <button class="putBase" onclick="base(document.getElementById('v4').input)"><strong>B</strong></button>
+                        <button class="putBase" onclick="bases('v4','b1')"><strong>B1</strong></button>
+                        <button class="putBase" onclick="bases('v4','b2')"><strong>B2</strong></button>
                     </li>
                 </ul>
             </div>
@@ -76,7 +80,7 @@
                 <ul>
                     <li>
                         <input class="vector" id="suma" name="suma1" type="number"><strong>+</strong><input class="vector" name="suma2" type="number">
-                        <button onclick="sumar()">-&gt;</button>
+                        <button>-&gt;</button>
                     </li>
                     <li>
                         <input class="vector" id="norma" type="number">
@@ -95,7 +99,7 @@
         </section>
     </div>
     <div id="canvas">
-        <canvas>
+        <canvas id="canvasVector">
         </canvas>
     </div>
 </div>

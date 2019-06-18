@@ -1,11 +1,12 @@
+
+
 /**
  * Inicializa el canvas con el (0,0) al centro
  * @method inicio
  */
 function inicio() {
-    //variables globales por si las moscas
-    canvas = document.getElementById('canvasVector');
-    context = canvas.getContext('2d');
+    var canvas = document.getElementById('canvasVector');
+    var context = canvas.getContext('2d');
     var mitadX = canvas.width / 2;
     var mitadY = canvas.height / 2;
     //setea el canvas al origen (0,0)
@@ -19,6 +20,8 @@ function inicio() {
  */
 function reset(){
     //borra cada cuadrante por separado por estar el origen de coordenadas en el centro
+    var canvas = document.getElementById('canvasVector');
+    var context = canvas.getContext('2d');
     context.clearRect(0, 0, -canvas.width, canvas.height);
     context.clearRect(0, 0, canvas.width, -canvas.height);
     context.clearRect(0, 0, -canvas.width, -canvas.height);
@@ -42,6 +45,8 @@ function reset(){
  * @param {int} labely Coordenada real en y
  */
 function dibujarCirculo(finalX,finalY,labelx,labely){
+    var canvas = document.getElementById('canvasVector');
+    var context = canvas.getContext('2d');
     context.beginPath();
     context.arc(finalX,finalY,2,0,Math.PI*2);
     context.fill();
@@ -64,6 +69,8 @@ function dibujarCirculo(finalX,finalY,labelx,labely){
  * @param {int} finalY
  */
 function dibujarLinea(origenX,origenY,finalX,finalY){
+    var canvas = document.getElementById('canvasVector');
+    var context = canvas.getContext('2d');
     context.beginPath();
     context.moveTo(origenX, origenY);
     context.lineTo(finalX, finalY);
@@ -100,7 +107,9 @@ function combinacionLineal(vector){
     return combinado;
 }
 
-function zoomAnim() {
+function zoomAnim(){
+    var canvas = document.getElementById('canvasVector');
+    var context = canvas.getContext('2d');
     context.clearRect(0, 0, -canvas.width, canvas.height);
     context.clearRect(0, 0, canvas.width, -canvas.height);
     context.clearRect(0, 0, -canvas.width, -canvas.height);

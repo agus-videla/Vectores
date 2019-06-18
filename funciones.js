@@ -1,6 +1,12 @@
 var x=0;
 var y=0;
 
+/**
+ * Muestra y oculta DIVS, es un sistema de pestañas
+ * @method verTeoria
+ * @param evt No estoy seguro lo saqué de W3S Ups...
+ * @param {string} tema Id del tema de la pesataña
+*/
 function verTeoria(evt, tema){
     var i, contenido, linkContenido;
 
@@ -18,6 +24,10 @@ function verTeoria(evt, tema){
     evt.currentTarget.className += " activo";
 }
 
+/**
+ * Inicializa el canvas con el (0,0) al centro
+ * @method inicio
+ */
 function inicio() {
     //variables globales por si las moscas
     canvas = document.getElementById('canvasVector');
@@ -28,6 +38,11 @@ function inicio() {
     context.translate(mitadX, mitadY);
     reset();
 }
+
+/**
+ * Borra los vectores y dibuja los ejes según las bases
+ * @method reset
+ */
 function reset(){
     //borra cada cuadrante por separado por estar el origen de coordenadas en el centro
     context.clearRect(0, 0, -canvas.width, canvas.height);
@@ -43,6 +58,15 @@ function reset(){
     dibujarLinea(0,0,parseInt(arraybase2[0])*canvas.width,parseInt(arraybase2[1])*-canvas.height);
     dibujarLinea(0,0,parseInt(arraybase2[0])*-canvas.width,parseInt(arraybase2[1])*canvas.height);
 }
+
+/**
+ * Dibuja un punto y la etiqueta al final del vector
+ * @method dibujarCirculo
+ * @param {int} finalX Coordenada en x del vector, transformada por el zoom
+ * @param {int} finalY Coordenada en y del vector, transformada por el zoom
+ * @param {int} labelx Coordenada real en x
+ * @param {int} labely Coordenada real en y
+ */
 function dibujarCirculo(finalX,finalY,labelx,labely){
     context.beginPath();
     context.arc(finalX,finalY,2,0,Math.PI*2);
@@ -54,25 +78,43 @@ function dibujarCirculo(finalX,finalY,labelx,labely){
     }else{
         context.fillText('[ '+ labelx +','+ labely +']', finalX, finalY -5);
     }
-
     context.closePath();
 }
 
+/**
+ * Dibuja una linea
+ * @method dibujarLinea
+ * @param {int} origenX
+ * @param {int} origenY
+ * @param {int} finalX
+ * @param {int} finalY
+ */
 function dibujarLinea(origenX,origenY,finalX,finalY){
-
     context.beginPath();
     context.moveTo(origenX, origenY);
     context.lineTo(finalX, finalY);
     context.lineWidth = 0.5;
     context.stroke();
     context.closePath();
-
 }
 
+/**
+ * Copia el vector deseado en el campo de base elegido
+ * @method Bases
+ * @param {string} vector Id del vector
+ * @param {string} base Id de la base
+ * @return Valor que retorna
+ */
 function bases(vector,base){
     document.getElementById(base).value = document.getElementById(vector).value;
 }
 
+/**
+ * Transforma las coordenadas segun la base actual
+ * @method CombinacionLineal
+ * @param {array} vector real
+ * @return {array} vector transformado
+ */
 function combinacionLineal(vector){
     var base1 = document.getElementById('b1').value;
     var base2 = document.getElementById('b2').value;
@@ -84,7 +126,16 @@ function combinacionLineal(vector){
     return combinado;
 }
 
+function zoomAnim(){
+
+}
+
+
 //Aca van las operaciones
+/**
+ * Dibuja el vector seleccionado
+ * @method plot
+ */
 function plot(){
     var txtInputPlot = document.getElementById('plot').value;
     var vector = document.getElementById('v' + txtInputPlot).value;
@@ -98,6 +149,10 @@ function plot(){
     dibujarCirculo(vectorResult[0]*zoom,-vectorResult[1]*zoom,temp[0],temp[1]);
 }
 
+/**
+ * Suma dos vectores elegidos y los dibuja
+ * @method sumar
+ */
 function sumar(){
     var txtInputSuma = document.getElementById('suma').value;
     var txtInputSuma2 = document.getElementById('suma2').value;
@@ -114,6 +169,10 @@ function sumar(){
     dibujarCirculo(vectorResult[0]*zoom,-vectorResult[1]*zoom,temp[0],temp[1]);
 }
 
+/**
+ * Calcula el modulo del vector seleccionado y lo muestra en un alert
+ * @method modulo
+ */
 function modulo(){
     var txtInputModulo = document.getElementById('modulo').value;
     var vector = document.getElementById('v' + txtInputModulo).value;
@@ -123,6 +182,10 @@ function modulo(){
     alert("|" + vector + "| = " + resultadocorregido);
 }
 
+/**
+ * Escala un vector y lo dibuja
+ * @method escalar
+ */
 function escalar(){
     var nmbInputModulo = document.getElementById('escalar').value;
     var txtInputModulo = document.getElementById('escalar2').value;
@@ -137,6 +200,10 @@ function escalar(){
     dibujarCirculo(vectorResult[0]*zoom,-vectorResult[1]*zoom,temp[0],temp[1]);
 }
 
+/**
+ * Calcula la distancia entre dos vectores elegidos y la muestra en un alert
+ * @method distancia
+ */
 function distancia(){
     var txtInputDistancia1 = document.getElementById('distancia1').value;
     var txtInputDistancia2 = document.getElementById('distancia2').value;

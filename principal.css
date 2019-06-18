@@ -38,13 +38,13 @@ nav{
 }
 #matriz{
     position: absolute;
-    right: 0;
+    right: 103px;
     margin: 0 3px;
     width: 100px;
 }
 #teoria{
     position: absolute;
-    right: 103px;
+    right: 0;
     margin: 0 3px;
     width: 100px;
 }
@@ -147,7 +147,7 @@ input.numero{
     height: 70%;
     bottom: 1vh;
     left: 0;
-    margin: inherit;
+
 }
 #inputs{
     width: 70%;

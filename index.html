@@ -80,23 +80,23 @@
             <div id="inputs">
                 <ul>
                     <li>
-                        <input class="vector" id="plot" type="number" onchange="checkInt(this.id,this.value)">
+                        <input class="vector" id="plot" type="number" placeholder="vector" onchange="checkInt(this.id,this.value)">
                         <button onclick="plot()">-&gt;</button>
                     </li>
                     <li>
-                        <input class="vector" id="suma" name="suma1" type="number" onchange="checkInt(this.id,this.value)"><strong>+</strong><input class="vector" id="suma2" name="suma2" type="number" onchange="checkInt(this.id,this.value)">
+                        <input class="vector" id="suma" name="suma1" type="number" placeholder="vector" onchange="checkInt(this.id,this.value)"><strong>+</strong><input class="vector" id="suma2" name="suma2" type="number" placeholder="vector" onchange="checkInt(this.id,this.value)">
                         <button onclick="sumar()">-&gt;</button>
                     </li>
                     <li>
-                        <input class="numero" id="escalar" type="number"><strong>*</strong><input class="vector" id="escalar2" type="number" onchange="checkInt(this.id,this.value)">
+                        <input class="numero" id="escalar" type="number" placeholder="escalar"><strong>*</strong><input class="vector" id="escalar2" type="number" placeholder="vector" onchange="checkInt(this.id,this.value)">
                         <button onclick="escalar()">-&gt;</button>
                     </li>
                     <li>
-                        <input class="vector" id="modulo" type="number" onchange="checkInt(this.id,this.value)">
+                        <input class="vector" id="modulo" type="number" placeholder="vector" onchange="checkInt(this.id,this.value)">
                         <button onclick="modulo()">-&gt;</button>
                     </li>
                     <li>
-                        <input class="vector" id="distancia1" type="number" onchange="checkInt(this.id,this.value)"><strong>;</strong><input class="vector" id="distancia2" type="number" onchange="checkInt(this.id,this.value)">
+                        <input class="vector" id="distancia1" type="number" placeholder="vector" onchange="checkInt(this.id,this.value)"><strong>;</strong><input class="vector" id="distancia2" type="number" placeholder="vector" onchange="checkInt(this.id,this.value)">
                         <button onclick="distancia()">-&gt;</button>
                     </li>
                 </ul>

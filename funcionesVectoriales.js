@@ -98,6 +98,7 @@ function dibujarLinea(origenX,origenY,finalX,finalY){
  */
 function bases(vector,base){
     document.getElementById(base).value = document.getElementById(vector).value;
+    dibujarCoordenadas();
 }
 
 /**

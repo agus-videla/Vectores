@@ -1,27 +1,28 @@
-
-
 /**
  * Inicializa el canvas con el (0,0) al centro
  * @method inicio
  */
 function inicio() {
+    VectoresActuales = [];  //Almacena los vectores dibujados actualmente
+    EtiquetasActuales = [];  //Almacena las etiquetas de los vectores dibujados actualmente
     var canvas = document.getElementById('canvasVector');
     var context = canvas.getContext('2d');
     var mitadX = canvas.width / 2;
     var mitadY = canvas.height / 2;
     //setea el canvas al origen (0,0)
     context.translate(mitadX, mitadY);
+    context.translate(0.5, 0.5);
     reset();
 }
 
 /**
- * Borra los vectores y dibuja los ejes según las bases
- * @method reset
+ * Borra el canvas y dibuja los ejes según las bases
+ * @method dibujarCoordenadas
  */
-function reset(){
-    //borra cada cuadrante por separado por estar el origen de coordenadas en el centro
+function dibujarCoordenadas() {
     var canvas = document.getElementById('canvasVector');
     var context = canvas.getContext('2d');
+    //borra cada cuadrante por separado por estar el origen de coordenadas en el centro
     context.clearRect(0, 0, -canvas.width, canvas.height);
     context.clearRect(0, 0, canvas.width, -canvas.height);
     context.clearRect(0, 0, -canvas.width, -canvas.height);
@@ -34,6 +35,16 @@ function reset(){
     dibujarLinea(0,0,parseInt(arraybase1[0])*-canvas.width,parseInt(arraybase1[1])*canvas.height);
     dibujarLinea(0,0,parseInt(arraybase2[0])*canvas.width,parseInt(arraybase2[1])*-canvas.height);
     dibujarLinea(0,0,parseInt(arraybase2[0])*-canvas.width,parseInt(arraybase2[1])*canvas.height);
+}
+
+/**
+ * Limpia los arreglos de vectores que están actualmente dibujados
+ * @method reset
+ */
+function reset(){
+    VectoresActuales = [];
+    EtiquetasActuales = [];
+    dibujarCoordenadas();
 }
 
 /**
@@ -84,7 +95,6 @@ function dibujarLinea(origenX,origenY,finalX,finalY){
  * @method Bases
  * @param {string} vector Id del vector
  * @param {string} base Id de la base
- * @return Valor que retorna
  */
 function bases(vector,base){
     document.getElementById(base).value = document.getElementById(vector).value;
@@ -107,17 +117,83 @@ function combinacionLineal(vector){
     return combinado;
 }
 
-function zoomAnim(){
-    var canvas = document.getElementById('canvasVector');
-    var context = canvas.getContext('2d');
-    context.clearRect(0, 0, -canvas.width, canvas.height);
-    context.clearRect(0, 0, canvas.width, -canvas.height);
-    context.clearRect(0, 0, -canvas.width, -canvas.height);
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    //deberia conocer los vectores actuales, re-escalarlos y dibujarlos de nuevo
-    //work in progress...
+/**
+ * Almacena coordenadas (duh)
+ * @method almacenarCoordenadas
+ * @param x
+ * @param y
+ */
+function almacenarCoordenadas(x, y){
+    VectoresActuales.push({x,y});
 }
-//Aca van las operaciones
+
+/**
+ * Guarda las etiquetas (no debería tener que explicar esto)
+ * @method almacenarEtiquetas
+ * @param x
+ * @param y
+ */
+function almacenarEtiquetas(x,y){
+    EtiquetasActuales.push({x,y});
+}
+
+
+/**
+ * Escala los vectores dinámicamente conforme va cambiando el zoom
+ * @method zoomAnim
+ */
+function zoomAnim(){
+    if(VectoresActuales[0] == null){
+        return;
+    }
+    dibujarCoordenadas();
+    var zoom = document.getElementById('zoom').value;
+    for(var length = VectoresActuales.length;0<length;length--){
+        VectoresActuales.push(VectoresActuales[0]);
+        EtiquetasActuales.push(EtiquetasActuales[0]);
+        dibujarLinea(0,0,VectoresActuales[0].x*zoom,-VectoresActuales[0].y*zoom);
+        dibujarCirculo(VectoresActuales[0].x*zoom,-VectoresActuales[0].y*zoom,EtiquetasActuales[0].x,EtiquetasActuales[0].y);
+        VectoresActuales.shift();
+        EtiquetasActuales.shift();
+    }
+}
+
+/**
+ * Se fija si los vectores han sido correctamente ingresados
+ * además, si se modificó una base vuelve a dibujar los ejes de coordenadas
+ * @method checkVector
+ * @param id
+ * @param valor
+ */
+function checkVector(id,valor){
+    if(valor === "")
+        return;
+    if(!valor.includes(',')) {
+        alert('Para declarar un vector separe los componentes con una coma. \nEjemplo: 4,5');
+        document.getElementById(id).value = "";
+        return;
+    }
+    if(id === 'b1' || id === 'b2'){
+        reset();
+    }
+}
+
+/**
+ * Se fija si las funciones han sido correctamente utilizadas
+ * @method checkInt
+ * @param id
+ * @param valor
+ */
+function checkInt(id,valor){
+    if(valor === "")
+        return;
+    if(valor.includes('-') || valor.includes(',') || valor.includes('.') || valor>4 || valor < 1) {
+        alert('Para utilizar las funciones debe operar con los índices de los vectores declarados en la sección "vectores".' +
+            '\n\nEjemplo: \n\n1. 0,3 \n2. 1,2 \nSuma: 1 + 2 = 1,5');
+        document.getElementById(id).value = "";
+    }
+}
+
 /**
  * Dibuja el vector seleccionado
  * @method plot
@@ -131,6 +207,8 @@ function plot(){
     temp[0] = parseInt(arrayVector[0]);
     temp[1] = parseInt(arrayVector[1]);
     var vectorResult = combinacionLineal(temp);
+    almacenarCoordenadas(vectorResult[0],vectorResult[1]);
+    almacenarEtiquetas(temp[0],temp[1]);
     dibujarLinea(0,0,vectorResult[0]*zoom,-vectorResult[1]*zoom);
     dibujarCirculo(vectorResult[0]*zoom,-vectorResult[1]*zoom,temp[0],temp[1]);
 }
@@ -146,11 +224,13 @@ function sumar(){
     var vector2 = document.getElementById('v' + txtInputSuma2).value;
     var arrayVector1 = vector1.split(',');
     var arrayVector2 = vector2.split(',');
-    var temp =[0,0];
+    var temp = [0,0];
     var zoom = document.getElementById('zoom').value;
     temp[0] = parseInt(arrayVector1[0]) + parseInt(arrayVector2[0]);
     temp[1] = parseInt(arrayVector1[1]) + parseInt(arrayVector2[1]);
     var vectorResult = combinacionLineal(temp);
+    almacenarCoordenadas(vectorResult[0],vectorResult[1]);
+    almacenarEtiquetas(temp[0],temp[1]);
     dibujarLinea(0,0,vectorResult[0]*zoom,-vectorResult[1]*zoom);
     dibujarCirculo(vectorResult[0]*zoom,-vectorResult[1]*zoom,temp[0],temp[1]);
 }
@@ -182,6 +262,8 @@ function escalar(){
     temp[0] = nmbInputModulo * parseInt(arrayVector[0]);
     temp[1] = nmbInputModulo * parseInt(arrayVector[1]);
     var vectorResult = combinacionLineal(temp);
+    almacenarCoordenadas(vectorResult[0],vectorResult[1]);
+    almacenarEtiquetas(temp[0],temp[1]);
     dibujarLinea(0,0,vectorResult[0]*zoom,-vectorResult[1]*zoom);
     dibujarCirculo(vectorResult[0]*zoom,-vectorResult[1]*zoom,temp[0],temp[1]);
 }

@@ -28,9 +28,9 @@
             <h2>Bases:</h2>
             <div class="bases">
                 <label for="b1">B1:</label>
-                <span class="bases"><input class="base" id="b1" name="b1" type="text" value="1,0"></span>
+                <span class="bases"><input class="base" id="b1" name="b1" type="text" value="1,0" onchange="checkVector(this.id, this.value)"></span>
                 <label for="b2">B2:</label>
-                <span class="bases"><input class="base" id="b2" type="text" value="0,1"></span>
+                <span class="bases"><input class="base" id="b2" type="text" value="0,1" onchange="checkVector(this.id, this.value)"></span>
             </div>
         </section>
 
@@ -38,10 +38,10 @@
             <h2>Vectores:</h2>
             <div id="inputVectores">
                 <ol>
-                    <li><input type="text" id="v1"></li>
-                    <li><input type="text" id="v2"></li>
-                    <li><input type="text" id="v3"></li>
-                    <li><input type="text" id="v4"></li>
+                    <li><input type="text" id="v1" onchange="checkVector(this.id, this.value)"></li>
+                    <li><input type="text" id="v2" onchange="checkVector(this.id, this.value)"></li>
+                    <li><input type="text" id="v3" onchange="checkVector(this.id, this.value)"></li>
+                    <li><input type="text" id="v4" onchange="checkVector(this.id, this.value)"></li>
                 </ol>
             </div>
             <div id="putBase">
@@ -80,23 +80,23 @@
             <div id="inputs">
                 <ul>
                     <li>
-                        <input class="vector" id="plot" type="number">
+                        <input class="vector" id="plot" type="number" onchange="checkInt(this.id,this.value)">
                         <button onclick="plot()">-&gt;</button>
                     </li>
                     <li>
-                        <input class="vector" id="suma" name="suma1" type="number"><strong>+</strong><input class="vector" id="suma2" name="suma2" type="number">
+                        <input class="vector" id="suma" name="suma1" type="number" onchange="checkInt(this.id,this.value)"><strong>+</strong><input class="vector" id="suma2" name="suma2" type="number" onchange="checkInt(this.id,this.value)">
                         <button onclick="sumar()">-&gt;</button>
                     </li>
                     <li>
-                        <input class="numero" id="escalar" type="number"><strong>*</strong><input class="vector" id="escalar2" type="number">
+                        <input class="numero" id="escalar" type="number"><strong>*</strong><input class="vector" id="escalar2" type="number" onchange="checkInt(this.id,this.value)">
                         <button onclick="escalar()">-&gt;</button>
                     </li>
                     <li>
-                        <input class="vector" id="modulo" type="number">
+                        <input class="vector" id="modulo" type="number" onchange="checkInt(this.id,this.value)">
                         <button onclick="modulo()">-&gt;</button>
                     </li>
                     <li>
-                        <input class="vector" id="distancia1" type="number"><strong>;</strong><input class="vector" id="distancia2" type="number">
+                        <input class="vector" id="distancia1" type="number" onchange="checkInt(this.id,this.value)"><strong>;</strong><input class="vector" id="distancia2" type="number" onchange="checkInt(this.id,this.value)">
                         <button onclick="distancia()">-&gt;</button>
                     </li>
                 </ul>
@@ -107,7 +107,7 @@
         <canvas id="canvasVector">
         </canvas>
         <button id="reset" onclick="reset()"><strong>Reset</strong></button>
-        <input id="zoom" type="range" min="1" max="10" value="1">
+        <input id="zoom" type="range" step="0.1" min="1" max="10" value="1" onchange="zoomAnim()">
     </div>
 </div>
 

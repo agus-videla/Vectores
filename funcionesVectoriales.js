@@ -201,6 +201,9 @@ function checkInt(id,valor){
  */
 function plot(){
     var txtInputPlot = document.getElementById('plot').value;
+    if(txtInputPlot.length === 0){
+        return;
+    }
     var vector = document.getElementById('v' + txtInputPlot).value;
     var arrayVector = vector.split(',');
     var temp = [0,0];
@@ -221,6 +224,9 @@ function plot(){
 function sumar(){
     var txtInputSuma = document.getElementById('suma').value;
     var txtInputSuma2 = document.getElementById('suma2').value;
+    if(txtInputSuma.length === 0 || txtInputSuma2 === 0){
+        return;
+    }
     var vector1 = document.getElementById('v' + txtInputSuma).value;
     var vector2 = document.getElementById('v' + txtInputSuma2).value;
     var arrayVector1 = vector1.split(',');
@@ -242,6 +248,9 @@ function sumar(){
  */
 function modulo(){
     var txtInputModulo = document.getElementById('modulo').value;
+    if (txtInputModulo.length === 0){
+        return;
+    }
     var vector = document.getElementById('v' + txtInputModulo).value;
     var arrayVector = vector.split(',');
     var resultado = Math.sqrt(parseInt(arrayVector[0])*parseInt(arrayVector[0])+parseInt(arrayVector[1])*parseInt(arrayVector[1]));
@@ -256,6 +265,9 @@ function modulo(){
 function escalar(){
     var nmbInputModulo = document.getElementById('escalar').value;
     var txtInputModulo = document.getElementById('escalar2').value;
+    if(nmbInputModulo.length === 0 || txtInputModulo.length === 0){
+        return;
+    }
     var vector = document.getElementById('v' + txtInputModulo).value;
     var arrayVector = vector.split(',');
     var temp = [0,0];
@@ -276,6 +288,9 @@ function escalar(){
 function distancia(){
     var txtInputDistancia1 = document.getElementById('distancia1').value;
     var txtInputDistancia2 = document.getElementById('distancia2').value;
+    if(txtInputDistancia1.length === 0 || txtInputDistancia2.length === 0){
+        return;
+    }
     var vector1 = document.getElementById('v' + txtInputDistancia1).value;
     var vector2 = document.getElementById('v' + txtInputDistancia2).value;
     var arrayVector1 = vector1.split(',');
